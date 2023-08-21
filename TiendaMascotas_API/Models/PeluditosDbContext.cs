@@ -19,13 +19,13 @@ public partial class PeluditosDbContext : DbContext
 
     public virtual DbSet<CarritoDt> CarritoDts { get; set; }
 
-    public virtual DbSet<Categorium> Categoria { get; set; }
+    public virtual DbSet<Categoria> Categorias { get; set; }
 
     public virtual DbSet<Cliente> Clientes { get; set; }
 
     public virtual DbSet<EstadoCivil> EstadoCivils { get; set; }
 
-    public virtual DbSet<Mascotum> Mascota { get; set; }
+    public virtual DbSet<Mascota> Mascotas { get; set; }
 
     public virtual DbSet<Producto> Productos { get; set; }
 
@@ -39,7 +39,7 @@ public partial class PeluditosDbContext : DbContext
 
     public virtual DbSet<VentaDt> VentaDts { get; set; }
 
-    public virtual DbSet<Ventum> Venta { get; set; }
+    public virtual DbSet<Venta> Ventas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -96,7 +96,7 @@ public partial class PeluditosDbContext : DbContext
                 .HasConstraintName("FK_CarritoDt_Producto");
         });
 
-        modelBuilder.Entity<Categorium>(entity =>
+        modelBuilder.Entity<Categoria>(entity =>
         {
             entity.HasKey(e => e.IdCategoria);
 
@@ -171,7 +171,7 @@ public partial class PeluditosDbContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Mascotum>(entity =>
+        modelBuilder.Entity<Mascota>(entity =>
         {
             entity.HasKey(e => e.IdMascota);
 
@@ -317,7 +317,7 @@ public partial class PeluditosDbContext : DbContext
                 .HasConstraintName("FK_VentaDt_Venta");
         });
 
-        modelBuilder.Entity<Ventum>(entity =>
+        modelBuilder.Entity<Venta>(entity =>
         {
             entity.HasKey(e => e.IdVenta);
 

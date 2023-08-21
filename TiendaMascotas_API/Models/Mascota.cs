@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TiendaMascotas_API.Models;
 
-public partial class Mascotum
+public partial class Mascota
 {
     public int IdMascota { get; set; }
 

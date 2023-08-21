@@ -23,7 +23,7 @@ public partial class Producto
 
     public virtual ICollection<CarritoDt> CarritoDts { get; set; } = new List<CarritoDt>();
 
-    public virtual Categorium IdCategoriaNavigation { get; set; } = null!;
+    public virtual Categoria IdCategoriaNavigation { get; set; } = null!;
 
     public virtual ICollection<ProductoMascotum> ProductoMascota { get; set; } = new List<ProductoMascotum>();
 

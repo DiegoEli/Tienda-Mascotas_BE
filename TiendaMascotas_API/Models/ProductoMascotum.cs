@@ -13,7 +13,7 @@ public partial class ProductoMascotum
 
     public DateTime CreadoDate { get; set; }
 
-    public virtual Mascotum IdMascotaNavigation { get; set; } = null!;
+    public virtual Mascota IdMascotaNavigation { get; set; } = null!;
 
     public virtual Producto IdProductoNavigation { get; set; } = null!;
 }

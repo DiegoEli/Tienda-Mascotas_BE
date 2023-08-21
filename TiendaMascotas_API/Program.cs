@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using TiendaMascotas_API.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options => options.AddPolicy("Policy",
+                                builder => builder.AllowAnyOrigin()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()));
+
+//add Context
+builder.Services.AddDbContext<PeluditosDbContext>(options => {
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Conexion"));
+
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -15,6 +29,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("Policy");
 
 app.UseAuthorization();
 
