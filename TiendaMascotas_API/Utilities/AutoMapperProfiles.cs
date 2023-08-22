@@ -18,15 +18,11 @@ namespace TiendaMascotas_API.Utilities
             CreateMap<Usuario, UsuarioDTO>()
                 .ForMember(destino => destino.NombreRol,
                 opt => opt.MapFrom(origen => origen.IdRolNavigation.Nombre));
-
             CreateMap<Cliente, ClienteDTO>()
                 .ForMember(destino => destino.NombreEstadoCivil,
                 opt => opt.MapFrom(origen => origen.IdEstadoCivilNavigation.Nombre))
                 .ForMember(destino => destino.Password,
                 opt => opt.MapFrom(origen => origen.IdUsuarioNavigation.Clave));
-
-
-
         }
     }
 }
