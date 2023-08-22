@@ -25,7 +25,7 @@ public partial class Producto
 
     public virtual Categoria IdCategoriaNavigation { get; set; } = null!;
 
-    public virtual ICollection<ProductoMascotum> ProductoMascota { get; set; } = new List<ProductoMascotum>();
+    public virtual ICollection<ProductoMascota> ProductoMascota { get; set; } = new List<ProductoMascota>();
 
     public virtual ICollection<VentaDt> VentaDts { get; set; } = new List<VentaDt>();
 }

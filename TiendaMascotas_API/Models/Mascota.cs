@@ -13,5 +13,5 @@ public partial class Mascota
 
     public DateTime CreadoDate { get; set; }
 
-    public virtual ICollection<ProductoMascotum> ProductoMascota { get; set; } = new List<ProductoMascotum>();
+    public virtual ICollection<ProductoMascota> ProductoMascota { get; set; } = new List<ProductoMascota>();
 }

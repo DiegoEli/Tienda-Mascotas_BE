@@ -12,8 +12,7 @@ public partial class PeluditosDbContext : DbContext
 
     public PeluditosDbContext(DbContextOptions<PeluditosDbContext> options)
         : base(options)
-    {
-    }
+    {}
 
     public virtual DbSet<Carrito> Carritos { get; set; }
 
@@ -29,7 +28,7 @@ public partial class PeluditosDbContext : DbContext
 
     public virtual DbSet<Producto> Productos { get; set; }
 
-    public virtual DbSet<ProductoMascotum> ProductoMascota { get; set; }
+    public virtual DbSet<ProductoMascota> ProductoMascota { get; set; }
 
     public virtual DbSet<Rol> Rols { get; set; }
 
@@ -42,8 +41,9 @@ public partial class PeluditosDbContext : DbContext
     public virtual DbSet<Venta> Ventas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=(local); DataBase=PeluditosDB; Trusted_Connection=True; TrustServerCertificate=True;");
+    { }
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//        => optionsBuilder.UseSqlServer("Server=(local); DataBase=PeluditosDB; Trusted_Connection=True; TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -99,6 +99,8 @@ public partial class PeluditosDbContext : DbContext
         modelBuilder.Entity<Categoria>(entity =>
         {
             entity.HasKey(e => e.IdCategoria);
+
+            entity.ToTable("Categoria");
 
             entity.Property(e => e.CreadoDate)
                 .HasDefaultValueSql("(getdate())")
@@ -175,6 +177,8 @@ public partial class PeluditosDbContext : DbContext
         {
             entity.HasKey(e => e.IdMascota);
 
+            entity.ToTable("Mascota");
+
             entity.Property(e => e.CreadoDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -210,9 +214,11 @@ public partial class PeluditosDbContext : DbContext
                 .HasConstraintName("FK_Producto_Categoria");
         });
 
-        modelBuilder.Entity<ProductoMascotum>(entity =>
+        modelBuilder.Entity<ProductoMascota>(entity =>
         {
             entity.HasKey(e => e.IdProductoMascota);
+
+            entity.ToTable("ProductoMascota");
 
             entity.Property(e => e.CreadoDate)
                 .HasDefaultValueSql("(getdate())")
@@ -320,6 +326,8 @@ public partial class PeluditosDbContext : DbContext
         modelBuilder.Entity<Venta>(entity =>
         {
             entity.HasKey(e => e.IdVenta);
+
+            entity.ToTable("Venta");
 
             entity.Property(e => e.CreadoDate)
                 .HasDefaultValueSql("(getdate())")
