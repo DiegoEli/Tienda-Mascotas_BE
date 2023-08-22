@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TiendaMascotas_API.Models;
+using TiendaMascotas_API.Data;
 using TiendaMascotas_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +22,9 @@ builder.Services.AddDbContext<PeluditosDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Conexion"));
 
 });
+
+//Automapper
+builder.Services.AddAutoMapper(typeof(Program));
 
 //Inyección de dependencias
 builder.Services.AddScoped<CategoriaRepository>();

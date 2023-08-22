@@ -80,3 +80,5 @@ E:\DEVELOPER\WEB\DAWA_Proyecto\TiendaMascotas_API\TiendaMascotas_API\TiendaMasco
 E:\DEVELOPER\WEB\DAWA_Proyecto\TiendaMascotas_API\TiendaMascotas_API\TiendaMascotas_API\obj\Debug\net6.0\TiendaMascotas_API.pdb
 E:\DEVELOPER\WEB\DAWA_Proyecto\TiendaMascotas_API\TiendaMascotas_API\TiendaMascotas_API\obj\Debug\net6.0\TiendaMascotas_API.genruntimeconfig.cache
 E:\DEVELOPER\WEB\DAWA_Proyecto\TiendaMascotas_API\TiendaMascotas_API\TiendaMascotas_API\obj\Debug\net6.0\ref\TiendaMascotas_API.dll
+E:\DEVELOPER\WEB\DAWA_Proyecto\TiendaMascotas_API\TiendaMascotas_API\TiendaMascotas_API\bin\Debug\net6.0\AutoMapper.dll
+E:\DEVELOPER\WEB\DAWA_Proyecto\TiendaMascotas_API\TiendaMascotas_API\TiendaMascotas_API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

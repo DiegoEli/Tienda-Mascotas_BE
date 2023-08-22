@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "vziCUv9/ALttOQpEuoX2HwVGK6j9uqNZsRowfTT1u9Floj30CNqrTZQJXV5DcrhtxjoEzZhGQcVuoHbID35lVA==",
+  "dgSpecHash": "Dyy4BWRcofdvNXeTx+/2M3DehdXbWrDBdX+fbAksQVAVoxB/+BlE8l+sIROmApf2ExOoX7LtU2KXhXSfI7nSnw==",
   "success": true,
   "projectFilePath": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\TiendaMascotas_API\\TiendaMascotas_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JuanJoo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\JuanJoo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\JuanJoo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\JuanJoo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.2\\microsoft.data.sqlclient.5.0.2.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",

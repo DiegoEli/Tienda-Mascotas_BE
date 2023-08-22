@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using TiendaMascotas_API.Models;
 
-namespace TiendaMascotas_API.Models;
+namespace TiendaMascotas_API.Data;
 
 public partial class PeluditosDbContext : DbContext
 {
@@ -12,7 +13,7 @@ public partial class PeluditosDbContext : DbContext
 
     public PeluditosDbContext(DbContextOptions<PeluditosDbContext> options)
         : base(options)
-    {}
+    { }
 
     public virtual DbSet<Carrito> Carritos { get; set; }
 
@@ -42,8 +43,8 @@ public partial class PeluditosDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     { }
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseSqlServer("Server=(local); DataBase=PeluditosDB; Trusted_Connection=True; TrustServerCertificate=True;");
+    //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+    //        => optionsBuilder.UseSqlServer("Server=(local); DataBase=PeluditosDB; Trusted_Connection=True; TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
