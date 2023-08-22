@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TiendaMascotas_API.Models;
+using TiendaMascotas_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,16 +11,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Cors
 builder.Services.AddCors(options => options.AddPolicy("Policy",
                                 builder => builder.AllowAnyOrigin()
                                 .AllowAnyHeader()
                                 .AllowAnyMethod()));
 
-//add Context
+//Context
 builder.Services.AddDbContext<PeluditosDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Conexion"));
 
 });
+
+//Inyección de dependencias
+builder.Services.AddScoped<CategoriaRepository>();
 
 var app = builder.Build();
 

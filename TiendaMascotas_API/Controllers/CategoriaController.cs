@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TiendaMascotas_API.Models;
+using TiendaMascotas_API.Repositories;
 
 namespace TiendaMascotas_API.Controllers
 {
@@ -9,20 +10,20 @@ namespace TiendaMascotas_API.Controllers
     [ApiController]
     public class CategoriaController : ControllerBase
     {
-        private readonly PeluditosDbContext _context;
+        private readonly CategoriaRepository _categoriaRepository;
 
-        public CategoriaController(PeluditosDbContext context)
+        public CategoriaController(CategoriaRepository categoriaRepository)
         {
-            _context = context;
+            _categoriaRepository = categoriaRepository;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpGet("listarCategorias")]
+        public async Task<IActionResult> GetCategorias()
         {
             try
             {
-                var listCategoria = await _context.Categorias.ToListAsync();
-                return Ok(listCategoria);
+                var listCategorias = await _categoriaRepository.getCategorias();
+                return Ok(listCategorias);
             }
             catch (Exception ex)
             {
