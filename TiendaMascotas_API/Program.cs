@@ -28,6 +28,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 //Inyección de dependencias
 builder.Services.AddScoped<CategoriaRepository>();
+builder.Services.AddScoped<EstadoCivilRepository>();
+builder.Services.AddScoped<TipoPagoRepository>();
 
 var app = builder.Build();
 

@@ -9,6 +9,8 @@ namespace TiendaMascotas_API.Utilities
         public AutoMapperProfiles()
         {
             CreateMap<Categoria, CategoriaDTO>().ReverseMap();
+            CreateMap<EstadoCivil, EstadoCivilDTO>().ReverseMap();
+            CreateMap<TipoPago, TipoPagoDTO>().ReverseMap();
         }
     }
 }
