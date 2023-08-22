@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TiendaMascotas_API.props" />
+</Project>
