@@ -3783,19 +3783,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jhonn\\.nuget\\packages\\": {}
+    "C:\\Users\\JuanJoo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jhonn\\Desktop\\DAWA\\P2_PROYECTO_FINAL\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
+      "projectUniqueName": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\TiendaMascotas_API\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
       "projectName": "TiendaMascotas_API",
-      "projectPath": "C:\\Users\\jhonn\\Desktop\\DAWA\\P2_PROYECTO_FINAL\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
-      "packagesPath": "C:\\Users\\jhonn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jhonn\\Desktop\\DAWA\\P2_PROYECTO_FINAL\\DAWA_Proyecto_API\\TiendaMascotas_API\\obj\\",
+      "projectPath": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\TiendaMascotas_API\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
+      "packagesPath": "C:\\Users\\JuanJoo\\.nuget\\packages\\",
+      "outputPath": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\TiendaMascotas_API\\DAWA_Proyecto_API\\TiendaMascotas_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jhonn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JuanJoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3863,7 +3863,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

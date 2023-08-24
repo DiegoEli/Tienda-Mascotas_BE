@@ -76,6 +76,7 @@ namespace TiendaMascotas_API.Repositories
 
         public async Task<bool> resetPassword(UsuarioDTO user)
         {
+            bool resp = true;
             try
             {
                 user.Clave = encriptar(user.Clave!);
@@ -85,12 +86,13 @@ namespace TiendaMascotas_API.Repositories
                 userEncontrado.Clave = user.Clave;
                 _context.Usuarios.Update(userEncontrado);
                 await _context.SaveChangesAsync();
-                return true;
             }
             catch
             {
+                resp = false;
                 throw;
             }
+            return resp;
         }
 
         #region Seguridad de contraseñas

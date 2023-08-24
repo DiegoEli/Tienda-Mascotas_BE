@@ -24,7 +24,7 @@ namespace TiendaMascotas_API.DTOs
 
         public int IdUsuario { get; set; }
 
-        public string Password { get; set; } = null!;
+        public string Clave { get; set; } = null!;
 
         public bool? Estado { get; set; }
 

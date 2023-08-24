@@ -32,7 +32,7 @@ namespace TiendaMascotas_API.Utilities
             CreateMap<Cliente, ClienteDTO>()
                 .ForMember(destino => destino.NombreEstadoCivil,
                 opt => opt.MapFrom(origen => origen.IdEstadoCivilNavigation.Nombre))
-                .ForMember(destino => destino.Password,
+                .ForMember(destino => destino.Clave,
                 opt => opt.MapFrom(origen => origen.IdUsuarioNavigation.Clave));
             CreateMap<ClienteDTO, Cliente>()
                 .ForMember(destino => destino.IdEstadoCivilNavigation, opt => opt.Ignore())

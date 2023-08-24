@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TiendaMascotas_API.DTOs;
 using TiendaMascotas_API.Repositories;
 
 namespace TiendaMascotas_API.Controllers
@@ -29,6 +30,19 @@ namespace TiendaMascotas_API.Controllers
             }
         }
 
+        [HttpPut("actualizarCliente")]
+        public async Task<IActionResult> ActualizarCliente([FromBody] ClienteDTO cliente)
+        {
+            try
+            {
+                var resp = await _clienteRepository.updateCliente(cliente);
+                return Ok(resp);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 
 }
