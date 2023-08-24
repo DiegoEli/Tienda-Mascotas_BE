@@ -30,5 +30,38 @@ namespace TiendaMascotas_API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        //[HttpPost("agregarCategoria")]
+        //public async Task<ActionResult> PostCategorias(Categoria categoria)
+        //{
+        //    try
+        //    {
+        //        categoria.CreadoDate = DateTime.Now;
+        //        await _categoriaRepository.postCategorias(categoria);
+        //        return CreatedAtAction("Get", new { id = categoria.IdCategoria }, categoria);
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        return BadRequest(ex.Message);
+        //    }
+
+        //}
+
+        [HttpPost("agregarCategoria")]
+        public async Task<ActionResult> PostCategorias(Categoria categoria)
+        {
+            try
+            {
+                categoria.CreadoDate = DateTime.Now;
+                await _categoriaRepository.postCategorias(categoria);
+                return Ok(categoria); // Devuelve la categoría creada
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
     }
 }
