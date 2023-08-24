@@ -1,11 +1,9 @@
-﻿using TiendaMascotas_API.Models;
-
-namespace TiendaMascotas_API.DTOs
+﻿namespace TiendaMascotas_API.DTOs
 {
-    public class CarritoDtDTO
+    public class VentaDtDTO
     {
-        public int IdCarritoDt { get; set; }
-        public int IdCarrito { get; set; }
+        public int IdVentaDt { get; set; }
+        public int IdVenta { get; set; }
         public int IdProducto { get; set; }
         public string DescripcionProducto { get; set; } = null!;
         public int Cantidad { get; set; }
