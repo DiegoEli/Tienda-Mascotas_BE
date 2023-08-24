@@ -42,6 +42,23 @@ namespace TiendaMascotas_API.Repositories
             }
         }
 
+        public async Task<bool> validateEmail(string email)
+        {
+            bool resp = true;
+            try
+            {
+                var usuario = await _context.Usuarios.Where(u => u.Email == email).FirstOrDefaultAsync();
+                if (usuario == null)
+                    resp = false;
+            }
+            catch
+            {
+                resp = false;
+                throw;
+            }
+            return resp;
+        }
+
         public async Task<ClienteDTO> register(ClienteDTO cliente)
         {
             var transaction = _context.Database.BeginTransaction();

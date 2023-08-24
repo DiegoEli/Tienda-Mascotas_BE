@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TiendaMascotas_API.Data;
+using TiendaMascotas_API.Models;
 using TiendaMascotas_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 //Inyección de dependencias
 builder.Services.AddScoped<CategoriaRepository>();
+builder.Services.AddScoped<CarritoRepository>();
 builder.Services.AddScoped<EstadoCivilRepository>();
 builder.Services.AddScoped<ProductoRepository>();
 builder.Services.AddScoped<TipoPagoRepository>();
