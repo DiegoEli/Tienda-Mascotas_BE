@@ -45,13 +45,26 @@ namespace TiendaMascotas_API.Controllers
         }
 
         [HttpPost("registrar")]
-        public async Task<IActionResult> Registrar([FromBody] UsuarioDTO user)
+        public async Task<IActionResult> Registrar([FromBody] ClienteDTO cliente)
         {
             try
             {
-                ClienteDTO cliente = new ClienteDTO();
-                var usuario = await _usuarioRepository.register(user, cliente);
+                var usuario = await _usuarioRepository.register(cliente);
                 return Ok(usuario);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("actualizarPass")]
+        public async Task<IActionResult> ActualizarPassword([FromBody] UsuarioDTO usuario)
+        {
+            try
+            {
+                var resp = await _usuarioRepository.resetPassword(usuario);
+                return Ok(resp);
             }
             catch (Exception ex)
             {
