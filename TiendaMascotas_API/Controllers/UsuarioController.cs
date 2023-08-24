@@ -44,6 +44,20 @@ namespace TiendaMascotas_API.Controllers
             }
         }
 
+        [HttpGet("validarEmail/{email}")]
+        public async Task<IActionResult> GetEmail(string email)
+        {
+            try
+            {
+                var resp = await _usuarioRepository.validateEmail(email);
+                return Ok(resp);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("registrar")]
         public async Task<IActionResult> Registrar([FromBody] ClienteDTO cliente)
         {
