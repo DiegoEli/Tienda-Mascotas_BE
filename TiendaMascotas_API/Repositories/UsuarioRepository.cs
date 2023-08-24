@@ -42,15 +42,21 @@ namespace TiendaMascotas_API.Repositories
             }
         }
 
-        public async Task<UsuarioDTO> register(UsuarioDTO user, ClienteDTO cliente)
+        public async Task<ClienteDTO> register(ClienteDTO cliente)
         {
             var transaction = _context.Database.BeginTransaction();
-
+            Usuario user = new Usuario();
             try
             {
+                user.Nombre = cliente.Nombre;
+                user.Email = cliente.Email;
+                user.Clave = encriptar(cliente.Clave!);
+                user.IdRol = _context.Rols
+                    .Where(r => r.Nombre == "Cliente")
+                    .Select(r => r.IdRol).FirstOrDefault();
+
                 //Agregar Usuario
-                user.Clave = encriptar(user.Clave!);
-                _context.Usuarios.Add(_mapper.Map<Usuario>(user));
+                _context.Usuarios.Add(user);
                 await _context.SaveChangesAsync();
 
                 //Agregar Cliente
@@ -65,7 +71,26 @@ namespace TiendaMascotas_API.Repositories
                 transaction.Rollback();
                 throw;
             }
-            return user;
+            return cliente;
+        }
+
+        public async Task<bool> resetPassword(UsuarioDTO user)
+        {
+            try
+            {
+                user.Clave = encriptar(user.Clave!);
+                var userEncontrado = await _context.Usuarios.Where(u => u.IdUsuario == user.IdUsuario).FirstOrDefaultAsync();
+                if (userEncontrado == null)
+                    throw new TaskCanceledException("El usuario no existe");
+                userEncontrado.Clave = user.Clave;
+                _context.Usuarios.Update(userEncontrado);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         #region Seguridad de contraseñas
