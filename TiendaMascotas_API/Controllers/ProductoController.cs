@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TiendaMascotas_API.DTOs;
+using TiendaMascotas_API.Models;
 using TiendaMascotas_API.Repositories;
 
 namespace TiendaMascotas_API.Controllers
@@ -28,5 +30,23 @@ namespace TiendaMascotas_API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
+        [HttpPost("agregarProductos")]
+        public async Task<IActionResult> PostProductos([FromBody] ProductoDTO ProductoDTO)
+        {
+            try
+            {
+                var productoCreado = await _productoRepository.postProducto(ProductoDTO);
+                return Ok(productoCreado);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+
     }
 }
