@@ -17,6 +17,8 @@ public partial class Producto
 
     public decimal PrecioVenta { get; set; }
 
+    public string RutaFoto { get; set; } = null!;
+
     public bool? Estado { get; set; }
 
     public DateTime CreadoDate { get; set; }

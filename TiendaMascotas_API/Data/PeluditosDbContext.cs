@@ -203,6 +203,9 @@ public partial class PeluditosDbContext : DbContext
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(100)
                 .IsUnicode(false);
+            entity.Property(e => e.RutaFoto)
+                .HasMaxLength(200)
+                .IsUnicode(false);
             entity.Property(e => e.Estado)
                 .IsRequired()
                 .HasDefaultValueSql("((1))");

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DESARROLLO\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj": {}
+    "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj": {}
   },
   "projects": {
-    "E:\\DESARROLLO\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj": {
+    "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DESARROLLO\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
+        "projectUniqueName": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
         "projectName": "TiendaMascotas_API",
-        "projectPath": "E:\\DESARROLLO\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
+        "projectPath": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
         "packagesPath": "C:\\Users\\JuanJoo\\.nuget\\packages\\",
-        "outputPath": "E:\\DESARROLLO\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\obj\\",
+        "outputPath": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\JuanJoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

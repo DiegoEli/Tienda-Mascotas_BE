@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OiRkfnCoOWLzKVbYa2zSHO0fUU8J0A7JoB0mPDoSepIsOP+pfwKLPko5OymPbrfXAbHRUe59z7AjRP47fu5gEQ==",
+  "dgSpecHash": "Rfp5pNyMbmsaGJTvnFvmpbPog/1lrXpDqs4MgiSj0H61mVLxf2DgGchNJgMKSn7dnb3nzKOTOU0iqKEomENyUw==",
   "success": true,
-  "projectFilePath": "E:\\DESARROLLO\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
+  "projectFilePath": "E:\\DEVELOPER\\WEB\\DAWA_Proyecto\\DAWA_Proyecto_API\\TiendaMascotas_API\\TiendaMascotas_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JuanJoo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\JuanJoo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -11,6 +11,7 @@ namespace TiendaMascotas_API.DTOs
         public int Stock { get; set; }
         public decimal PrecioCosto { get; set; }
         public decimal PrecioVenta { get; set; }
+        public string RutaFoto { get; set; } = null!;
         public bool? Estado { get; set; }
     }
 }
