@@ -31,6 +31,20 @@ namespace TiendaMascotas_API.Controllers
             }
         }
 
+        [HttpGet("obtenerProducto/{id}")]
+        public async Task<IActionResult> GetProducto(int id)
+        {
+            try
+            {
+                var producto = await _productoRepository.getProducto(id);
+                return Ok(producto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
 
         [HttpPost("agregarProductos")]
         public async Task<IActionResult> PostProductos([FromBody] ProductoDTO ProductoDTO)

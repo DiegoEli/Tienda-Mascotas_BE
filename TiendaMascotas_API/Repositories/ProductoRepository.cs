@@ -24,6 +24,12 @@ namespace TiendaMascotas_API.Repositories
                 _mapper.ConfigurationProvider).ToListAsync();
         }
 
+        public async Task<ProductoDTO> getProducto(int id)
+        {
+            var producto = await _context.Productos.FindAsync(id);
+            return _mapper.Map<ProductoDTO>(producto);
+        }
+
         public async Task<ProductoDTO> postProducto(ProductoDTO Producto)
         {
             var transaction = _context.Database.BeginTransaction();
